@@ -1,0 +1,47 @@
+/* General page styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("pattern.jpg");  /* put this in static/ */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+header .logo img {
+  width: 80px;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #008CBA;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.hero .btn:hover {
+  background-color: #005f73;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}

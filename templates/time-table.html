@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Timetable</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Timetable Generato</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <h2>Enter Timetable Data</h2>
+      <form id="timetableForm">
+        <label>Number of Classrooms:
+          <input type="number" id="classrooms" placeholder="Mention classrooms" required >
+        </label>
+
+        <label>Number of Faculty:
+          <input type="number" id="faculty" placeholder="Mention faculty" required>
+        </label>
+
+        <label>Subjects :
+          <input type="text" id="subjects" placeholder="Mention subject" required>
+        </label>
+
+        <button type="submit" class="btn">Generate Timetable</button>
+      </form>
+    </section>
+
+    <section class="output-section">
+        <a href="cal.html">Calender</a>
+      <h2>Generated Timetable</h2>
+      <div id="output"></div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

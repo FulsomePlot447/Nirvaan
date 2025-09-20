@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIRVAAN - Smart Timetable & AI Assistant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='pattern.jpg') }}'); background-size: cover;">
+  <header>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" width="80">
+    </div>
+    <h1 style="color: azure; font-size: 40px;">NIRVAAN</h1>
+    <p style="color: beige;">Smart Education with AI-Powered Optimization</p>
+  </header>
+
+  <section class="hero">
+    <h2 style="color: bisque;">Complete Educational Solution</h2>
+    <p style="color: azure;">Schedule you Time and get AI assistance for all your educational needs.</p>
+    
+    <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 40px 0;">
+      <!-- Timetable Features -->
+      <div class="feature-card" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+        <h3 style="color: #4fc3f7; margin-bottom: 15px;">📅 Calender</h3>
+        <ul style="color: azure; list-style: none; padding: 0;">
+          <li style="margin: 10px 0;">✓ Keep track of dates</li>
+          <li style="margin: 10px 0;">✓ Check out the months</li>
+          <li style="margin: 10px 0;">✓ Mark important assignment dates</li>
+          <li style="margin: 10px 0;">✓ Make notes for every day</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a href="{{ url_for('show_calendar') }}" class="btn" style="margin-right: 10px;">View Calendar</a>
+        </div>
+      </div>
+
+      <!-- AI Assistant Features -->
+      <div class="feature-card" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+        <h3 style="color: #66bb6a; margin-bottom: 15px;">🤖 AI Assistant</h3>
+        <ul style="color: azure; list-style: none; padding: 0;">
+          <li style="margin: 10px 0;">✓ Document analysis</li>
+          <li style="margin: 10px 0;">✓ Smart Q&A</li>
+          <li style="margin: 10px 0;">✓ Timetable formatting</li>
+          <li style="margin: 10px 0;">✓ PDF export</li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <a href="/ai-assistant" class="btn" style="background-color: #2563eb;">Launch AI Assistant</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: auto; text-align: center; color: white; padding: 20px;">
+    <p>&copy; 2025 Nirvaan Team - Smart India Hackathon</p>
+    <p style="font-size: 14px; margin-top: 10px;">
+      <a href="/ai-assistant" style="color: #93c5fd; text-decoration: none;">AI Assistant</a> | 
+      <a href="/calendar" style="color: #93c5fd; text-decoration: none;">Calendar</a>
+    </p>
+  </footer>
+
+  <script>
+    // Add some dynamic effects
+    document.addEventListener('DOMContentLoaded', function() {
+      const featureCards = document.querySelectorAll('.feature-card');
+      featureCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+        card.style.animation = 'slideInUp 0.6s ease-out forwards';
+      });
+    });
+  </script>
+
+  <style>
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #16a34a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #15803d;
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</script>
+</body>
+</html>
